@@ -32,6 +32,9 @@ class Question(models.Model):
     def __str__(self):
         return self.get_category_display() + " - " + self.que
 
+    def category_print(self):
+        return self.get_category_display()
+
 
 class Answer(models.Model):
     id = models.CharField(unique=True, default=uuid.uuid4, editable=False, max_length=50, primary_key=True)
