@@ -21,7 +21,7 @@ class Question(models.Model):
     id = models.CharField(unique=True, default=uuid.uuid4, editable=False, max_length=50, primary_key=True)
     que = models.TextField(null=True)
     author = models.CharField(max_length=100)
-    date_que = models.DateTimeField(default=datetime.now, blank=True)
+    date_que = models.DateTimeField(blank=True, auto_now=True)
     category = models.CharField(max_length=100, choices=LANGUAGES)
 
     class Meta:

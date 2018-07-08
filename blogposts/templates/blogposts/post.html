@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-   <h3>{{ question.que }}</h3>
-   <span>{{ question.author }}</span>
+    <div class="container card">
+        <h3>{{ question.que }}</h3>
+        <span>{{ question.author }}</span>
+        <h6><span class="badge badge-secondary">{{ question.category_print }}</span></h6>
+    </div>
 {% endblock %}
 
